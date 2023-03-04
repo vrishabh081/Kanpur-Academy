@@ -5,7 +5,7 @@ import axios from "axios";
 // sign up-
 export const signUp = (sendData) => (dispatch) => {
     dispatch({type: types.REQUEST_SIGN_UP})
-    return axios.post("http://localhost:8000/auth/signup", sendData)
+    return axios.post("https://ill-zipper-duck.cyclic.app/auth/signup", sendData)
         .then(res=>{
             dispatch({type: types.SUCCESS_SIGN_UP, signUp: res.data})
         })
@@ -18,7 +18,7 @@ export const signUp = (sendData) => (dispatch) => {
 // sign in with email-
 export const signInWithEmail = (sendData) => (dispatch) => {
     dispatch({type: types.REQUEST_SIGN_IN_WITH_EMAIL})
-    return axios.post("https://sr-gurukul-academy-server.vercel.app/api/v1/auth/signin", sendData)
+    return axios.post("https://ill-zipper-duck.cyclic.app/api/v1/auth/signin", sendData)
         .then(res=>{
             return dispatch({type: types.SUCCESS_SIGN_IN_WITH_EMAIL, emailSignInResponse: res.data})
         })
@@ -31,7 +31,7 @@ export const signInWithEmail = (sendData) => (dispatch) => {
 // forget password-
 export const forgetPassword = (sendData) => (dispatch) => {
     dispatch({type: types.REQUEST_FORGET_PASSWORD})
-    return axios.post("https://sr-gurukul-academy-server.vercel.app/api/v1/auth/forget-password", sendData)
+    return axios.post("https://ill-zipper-duck.cyclic.app/api/v1/auth/forget-password", sendData)
         .then(res=>{
             alert(res.data.message);
             return dispatch({type: types.SUCCESS_FORGET_PASSWORD, forgetPasswordResponse: res.data})
