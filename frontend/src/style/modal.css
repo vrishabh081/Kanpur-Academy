@@ -1,0 +1,153 @@
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.modal{
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 30rem;
+    padding: 1rem;
+    transition: 0.5s;
+}
+.modal ion-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.modal input, label{
+    display: block;
+    padding: 1rem;
+}
+
+/* delete-modal-btn */
+#delete-modal-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.delete-btn, .cancel-btn{
+    padding: 0 1.5rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.delete-btn{
+    background-color: rgb(255, 30, 30);
+    color: white;
+}
+.delete-btn:hover{
+    background-color: rgb(195, 0, 0);
+}
+.cancel-btn{
+    background-color: rgba(128, 128, 128, 0.273);
+    color: black;
+}
+.cancel-btn:hover{
+    background-color: rgba(128, 128, 128, 0.612);
+}
+
+.showovelay{
+    z-index: 1;
+    opacity: 1;
+}
+.showmodal{
+    top: 50%;
+    z-index: 1;
+}
+
+
+@media screen and (max-width: 600px) {
+    .overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    .modal{
+        position: fixed;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        width: 90%;
+        padding: 1rem;
+        transition: 0.5s;
+    }
+    .modal ion-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.5rem;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .modal input, label{
+        display: block;
+        padding: 1rem;
+    }
+    
+    /* delete-modal-btn */
+    #delete-modal-btn{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+    .delete-btn, .cancel-btn{
+        padding: 0 1rem;
+        height: 3rem;
+        font-size: 1rem;
+        letter-spacing: 1.2px;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .delete-btn{
+        background-color: rgb(255, 30, 30);
+        color: white;
+    }
+    .delete-btn:hover{
+        background-color: rgb(195, 0, 0);
+    }
+    .cancel-btn{
+        background-color: rgba(128, 128, 128, 0.273);
+        color: black;
+    }
+    .cancel-btn:hover{
+        background-color: rgba(128, 128, 128, 0.612);
+    }
+    
+    .showovelay{
+        z-index: 1;
+        opacity: 1;
+    }
+    .showmodal{
+        top: 50%;
+        z-index: 1;
+    }
+
+}

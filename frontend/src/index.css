@@ -1,0 +1,87 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(137, 43, 226, 0.083);
+  letter-spacing: 1.5px;
+}
+h1, h2, h3{
+  margin-bottom: 1.1rem;
+}
+a{
+  text-decoration: none;
+}
+h1, h2, h3, a, p, label, p, a{
+  color: #1500b1;
+}
+h1{
+  text-align: center;
+}
+textarea:focus, input:focus, select:focus{
+  outline: 1px solid #fa00dc;
+}
+textarea::placeholder, input::placeholder{
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}
+/* buttton */
+button{
+  display: block;
+  margin: auto;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #fff;
+  color: #060eb9;
+  border: 1px solid #fa00dc;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+button:hover{
+  border: 1px solid #060eb9;
+  background: -webkit-linear-gradient(#060eb9, #fa00dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+ion-icon{
+  cursor: pointer;
+  color: #060eb9;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+ion-icon:hover{
+  color: #fa00dc;
+}
+
+/* loader */
+#loader{
+  background: -webkit-linear-gradient(#060eb9, #fa00dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 480px) {
+  h1, h2, h3, a, p, label, p, a{
+    color: #1500b1;
+  }
+  h1{
+    font-size: 1.5rem;
+  }
+  h2{
+    font-size: 1.3rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
+  p{
+    font-size: 0.9rem;
+  }
+}
