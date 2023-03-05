@@ -77,8 +77,8 @@ const signUp = (req, res) => {
               var mailOptions = {
                 from: process.env.authMail,
                 to: email,
-                subject: "SR Gurukul Academy, successfully registeration!",
-                text: `Hi, ${name},You have successfully registered in SR Gurukul Academy.`,
+                subject: "Kanpur Academy, successfully registeration!",
+                text: `Hi, ${name},You have successfully registered in Kanpur Academy.`,
               };
 
               transporter.sendMail(mailOptions, function (error, info) {
@@ -154,7 +154,7 @@ const signIn = (req, res) => {
                 var mailOptions = {
                   from: process.env.authMail,
                   to: email,
-                  subject: "SR Gurukul Academy, logged in OTP!",
+                  subject: "Kanpur Academy, logged in OTP!",
                   text: `Hi ${userData.name}, Your OTP is ${randomOtp}.`,
                 };
   
