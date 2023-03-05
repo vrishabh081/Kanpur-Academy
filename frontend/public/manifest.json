@@ -1,11 +1,11 @@
 {
-    "theme_color" : "black",
-    "background_color" : "black",
+    "theme_color" : "#060eb9",
+    "background_color" : "#fa00dc",
     "display" : "standalone",
     "scope" : "/",
     "start_url" : "/",
-    "name" : "SR Gurukul Academy",
-    "short_name" : "SR",
+    "name" : "Kanpur Academy",
+    "short_name" : "Kanpur Academy",
   "icons": [
     {
       "src": "SR_Logo.png",

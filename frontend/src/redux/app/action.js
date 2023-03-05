@@ -5,7 +5,7 @@ import * as types from "./actionType";
 export const getAllStudentsData = ()=> (dispatch)=>{
     dispatch({type: types.GET_ALL_STUDENTS_REQUEST})
     return axios
-        .get("https://ill-zipper-duck.cyclic.app/api/v1/student")
+        .get("https://amethyst-xerus-wrap.cyclic.app/api/v1/student")
         .then(res=>{
             dispatch({type: types.GET_ALL_STUDENTS_SUCCESS, payload:res.data})
         })
@@ -18,7 +18,7 @@ export const getAllStudentsData = ()=> (dispatch)=>{
 export const getSingleStudentsData = (_id)=> (dispatch)=>{
     dispatch({type: types.GET_SINGLE_STUDENT_REQUEST})
     return axios
-        .get(`https://ill-zipper-duck.cyclic.app/api/v1/student/${_id}`)
+        .get(`https://amethyst-xerus-wrap.cyclic.app/api/v1/student/${_id}`)
         .then(res=>{
             dispatch({type: types.GET_SINGLE_STUDENT_SUCCESS, singleStudentData:res.data[0]})
         })
@@ -31,7 +31,7 @@ export const getSingleStudentsData = (_id)=> (dispatch)=>{
 export const postStudentData = (payload)=> (dispatch)=>{
     dispatch({type: types.POST_STUDENTS_REQUEST})
     return axios
-        .post("https://ill-zipper-duck.cyclic.app/api/v1/student/addstudent", payload)
+        .post("https://amethyst-xerus-wrap.cyclic.app/api/v1/student/addstudent", payload)
         .then(res=>{
             alert(res.data.message);
             dispatch({type: types.POST_STUDENTS_SUCCESS, postResponse: res.data})
@@ -46,7 +46,7 @@ export const postStudentData = (payload)=> (dispatch)=>{
 export const updateStudentData = (payload, _id)=> (dispatch)=>{
     dispatch({type: types.UPDATE_STUDENT_REQUEST})
     return axios
-        .patch(`https://ill-zipper-duck.cyclic.app/api/v1/student/updatestudent/${_id}`, payload)
+        .patch(`https://amethyst-xerus-wrap.cyclic.app/api/v1/student/updatestudent/${_id}`, payload)
         .then(res=>{
             dispatch({type: types.UPDATE_STUDENT_SUCCESS, updateResponse: res.data})
         })
@@ -59,7 +59,7 @@ export const updateStudentData = (payload, _id)=> (dispatch)=>{
 export const deleteStudentData = (_id)=> (dispatch)=>{
     dispatch({type: types.DELETE_STUDENT_REQUEST})
     return axios
-        .delete(`https://ill-zipper-duck.cyclic.app/api/v1/student/deletestudent/${_id}`)
+        .delete(`https://amethyst-xerus-wrap.cyclic.app/api/v1/student/deletestudent/${_id}`)
         .then(res=>{
             dispatch({type: types.DELETE_STUDENT_SUCCESS, deleteResponse: res.data})
         })

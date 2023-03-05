@@ -61,6 +61,8 @@ export function SignInWithEmail()
                     </div>
                     <button  id="sign-in-r-btn" onClick={emailSignInHandler}>{isLoading === true ? "...wait" : "Sign in"}</button>
                     <Link to={"/auth/forget-password"} style={{display:"block", margin:"1rem auto 0 auto", textAlign:"center"}}>Forget password ?</Link>
+                    <p style={{textAlign:"center", marginTop:"1rem", color:"#fa00dc"}}>or</p>
+                    <Link to={"/auth/signup"} style={{display:"block", margin:"1rem auto 0 auto", textAlign:"center"}}>Don't have an account ?</Link>
                 </div>
             </div>
         </>

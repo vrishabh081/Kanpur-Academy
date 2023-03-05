@@ -5,7 +5,7 @@ import * as types from "./actionType";
 export const getAccessoreis = ()=> (dispatch)=>{
     dispatch({type: types.GET_ACCESSORIES_REQUEST})
     return axios
-        .get("https://ill-zipper-duck.cyclic.app/api/v1/accessory")
+        .get("https://amethyst-xerus-wrap.cyclic.app/api/v1/accessory")
         .then(res=>{
             dispatch({type: types.GET_ACCESSORIES_SUCCESS, payload:res.data})
         })
@@ -18,7 +18,7 @@ export const getAccessoreis = ()=> (dispatch)=>{
 export const postAccessoreisData = (payload)=> (dispatch)=>{
     dispatch({type: types.POST_ACCESSORIES_REQUEST})
     return axios
-        .post("https://ill-zipper-duck.cyclic.app/api/v1/accessory/addaccessory", payload)
+        .post("https://amethyst-xerus-wrap.cyclic.app/api/v1/accessory/addaccessory", payload)
         .then(res=>{
             dispatch({type: types.POST_ACCESSORIES_SUCCESS, postResponse: res.data.message})
             alert(res.data.message)
@@ -33,7 +33,7 @@ export const postAccessoreisData = (payload)=> (dispatch)=>{
 export const updateAccessoreis = (payload, _id)=> (dispatch)=>{
     dispatch({type: types.UPDATE_ACCESSORIES_REQUEST})
     return axios
-        .patch(`https://ill-zipper-duck.cyclic.app/api/v1/accessory/updateaccessory/${_id}`, payload)
+        .patch(`https://amethyst-xerus-wrap.cyclic.app/api/v1/accessory/updateaccessory/${_id}`, payload)
         .then(res=>{
             dispatch({type: types.UPDATE_ACCESSORIES_SUCCESS, updateResponse: res.data.message})
             alert(res.data.message)
@@ -47,7 +47,7 @@ export const updateAccessoreis = (payload, _id)=> (dispatch)=>{
 export const deleteAccessoreis = (_id)=> (dispatch)=>{
     dispatch({type: types.DELETE_ACCESSORIES_REQUEST})
     return axios
-        .delete(`https://ill-zipper-duck.cyclic.app/api/v1/accessory/deleteaccessory/${_id}`)
+        .delete(`https://amethyst-xerus-wrap.cyclic.app/api/v1/accessory/deleteaccessory/${_id}`)
         .then(res=>{
             alert(res.data.message)
             dispatch({type: types.DELETE_ACCESSORIES_SUCCESS, deleteResponse: res.data.message})
